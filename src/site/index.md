@@ -4,7 +4,6 @@ subtitle: A project scaffold for getting building with Eleventy quickly.
 layout: layouts/base.njk
 ---
 
-
 ## This site is a starting point
 
 From this point we should already have:
@@ -16,8 +15,7 @@ From this point we should already have:
 - JS [search index](/search.json) generator
 - Serverless (FaaS) development pipeline with Netlify Functions for Lambda
 
-
-## Post pages
+<!-- ## Post pages
 
 The pages found in in the posts
 
@@ -28,20 +26,49 @@ The pages found in in the posts
     <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLL d, y") }}</time>
   </li>
 {%- endfor -%}
-</ul>
+</ul> -->
 
-## Links from an external data source
+## Projects
 
-These links were sourced from [hawksworx.com](https://www.hawksworx.com/feed.json) at build time.
+These projects were source from [this Google Sheet](https://docs.google.com/spreadsheets/d/10YkpIfRy7Bj3TzsE-7-IreYsADhxBFAJEFcYhZpKnYc/edit#gid=0) at build time.
 
 <ul class="listing">
-{%- for item in hawksworx.entries.slice(0,5) -%}
+{%- for item in googleSheet.data -%}
+  {%- if 'project' in item.tags -%}
   <li>
     <a href="{{ item.link }}">{{ item.title }}</a>
   </li>
+  {%- endif -%}
 {%- endfor -%}
 </ul>
 
+## Websites
+
+These projects were source from [this Google Sheet](https://docs.google.com/spreadsheets/d/10YkpIfRy7Bj3TzsE-7-IreYsADhxBFAJEFcYhZpKnYc/edit#gid=0) at build time.
+
+<ul class="listing">
+{%- for item in googleSheet.data -%}
+  {%- if 'website' in item.tags -%}
+  <li>
+    <a href="{{ item.link }}">{{ item.title }}</a>
+  </li>
+  {%- endif -%}
+{%- endfor -%}
+</ul>
+
+## Graphics
+
+These projects were source from [this Google Sheet](https://docs.google.com/spreadsheets/d/10YkpIfRy7Bj3TzsE-7-IreYsADhxBFAJEFcYhZpKnYc/edit#gid=0) at build time.
+
+<ul class="listing">
+{%- for item in googleSheet.data -%}
+  {%- if 'graphic' in item.tags -%}
+  <li>
+    <a href="{{ item.link }}">{{ item.title }}</a>
+  </li>
+  {%- endif -%}
+{%- endfor -%}
+</ul>
 
 The data can be stashed locally by running:
 
@@ -54,6 +81,3 @@ It will then be available locally for building with:
 ```
 yarn start
 ```
-
-
-

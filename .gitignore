@@ -4,3 +4,5 @@ functions
 src/site/_includes/css
 .env
 yarn-error.log
+credentials.json
+.python-version
