@@ -1,83 +1,39 @@
 ---
-title: EleventyOne
-subtitle: A project scaffold for getting building with Eleventy quickly.
+title: I'm Patrick Judge.
+subtitle: Current doing digital things for [Better Government Association](https://www.bettergov.org/).
 layout: layouts/base.njk
 ---
 
-## This site is a starting point
-
-From this point we should already have:
-
-- [Eleventy](https://11ty.io) with a skeleton site
-- A date format filter for Nunjucks
-- A tiny inline Sass pipeline
-- A tiny inline JS pipeline. (<a href="#" class="btn-log">Test a console.log message</a>)
-- JS [search index](/search.json) generator
-- Serverless (FaaS) development pipeline with Netlify Functions for Lambda
-
-<!-- ## Post pages
-
-The pages found in in the posts
+{%- macro projectList(tag) -%}
 
 <ul class="listing">
-{%- for page in collections.post -%}
+{%- for item in googleSheet.data -%}
+  {%- if tag in item.tags -%}
   <li>
-    <a href="{{ page.url }}">{{ page.data.title }}</a> -
-    <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLL d, y") }}</time>
+  <figure>
+    <img src="https://via.placeholder.com/300x200">
+    <figcaption><a href="{{ item.link }}">{{ item.title }}</a></figcaption>
+  </figure>
   </li>
+  {%- endif -%}
 {%- endfor -%}
-</ul> -->
+</ul>
+{%- endmacro -%}
 
 ## Projects
 
 These projects were source from [this Google Sheet](https://docs.google.com/spreadsheets/d/10YkpIfRy7Bj3TzsE-7-IreYsADhxBFAJEFcYhZpKnYc/edit#gid=0) at build time.
 
-<ul class="listing">
-{%- for item in googleSheet.data -%}
-  {%- if 'project' in item.tags -%}
-  <li>
-    <a href="{{ item.link }}">{{ item.title }}</a>
-  </li>
-  {%- endif -%}
-{%- endfor -%}
-</ul>
+{{ projectList('project') }}
 
 ## Websites
 
 These projects were source from [this Google Sheet](https://docs.google.com/spreadsheets/d/10YkpIfRy7Bj3TzsE-7-IreYsADhxBFAJEFcYhZpKnYc/edit#gid=0) at build time.
 
-<ul class="listing">
-{%- for item in googleSheet.data -%}
-  {%- if 'website' in item.tags -%}
-  <li>
-    <a href="{{ item.link }}">{{ item.title }}</a>
-  </li>
-  {%- endif -%}
-{%- endfor -%}
-</ul>
+{{ projectList('website') }}
 
 ## Graphics
 
 These projects were source from [this Google Sheet](https://docs.google.com/spreadsheets/d/10YkpIfRy7Bj3TzsE-7-IreYsADhxBFAJEFcYhZpKnYc/edit#gid=0) at build time.
 
-<ul class="listing">
-{%- for item in googleSheet.data -%}
-  {%- if 'graphic' in item.tags -%}
-  <li>
-    <a href="{{ item.link }}">{{ item.title }}</a>
-  </li>
-  {%- endif -%}
-{%- endfor -%}
-</ul>
-
-The data can be stashed locally by running:
-
-```
-yarn run seed
-```
-
-It will then be available locally for building with:
-
-```
-yarn start
-```
+{{ projectList('graphic') }}
