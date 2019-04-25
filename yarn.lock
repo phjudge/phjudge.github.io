@@ -5194,6 +5194,11 @@ markdown-it@^8.4.2:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
+marked@0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.5.tgz#4113a15ac5d7bca158a5aae07224587b9fa15b94"
+  integrity sha1-QROhWsXXvKFYpargciRYe5+hW5Q=
+
 matchdep@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/matchdep/-/matchdep-2.0.0.tgz#c6f34834a0d8dbc3b37c27ee8bbcb27c7775582e"
@@ -5799,6 +5804,13 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
+
+nunjucks-markdown-filter@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/nunjucks-markdown-filter/-/nunjucks-markdown-filter-0.1.0.tgz#fa078f6bde1b09174edfd3c0ec4666ef55eecf9b"
+  integrity sha1-+gePa94bCRdO39PA7EZm71Xuz5s=
+  dependencies:
+    marked "0.3.5"
 
 nunjucks@^3.2.0:
   version "3.2.0"

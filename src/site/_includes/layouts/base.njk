@@ -9,16 +9,8 @@
   <body class="{{ bodyClass }}" >
     <div class="container">
       <header>
-        <ul class="nav">
-          <li>
-            <a href="/">home<small>where the heart is</small></a>
-          </li>
-          <li>
-            <a href="/about">about<small>all about this</small></a>
-          </li>
-        </ul>
         <h1>{{ title }}</h1>
-        {%- if subtitle %}<p class="subtitle">{{ subtitle }}</p>{% endif %}
+        {%- if subtitle %}<p class="subtitle">{{ subtitle | md | safe }}</p>{% endif %}
       </header>
       {{ content | safe }}
       {% include "footer.njk" %}

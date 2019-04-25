@@ -7,14 +7,15 @@ module.exports = function(config) {
   // Layout aliases can make templates more portable
   config.addLayoutAlias("default", "layouts/base.njk");
 
-  // Add some utiliuty filters
+  // Add some utility filters
   config.addFilter("squash", require("./src/filters/squash.js"));
   config.addFilter("dateDisplay", (dateObj, format = "LLL d, y") => {
     return DateTime.fromJSDate(dateObj, { hour12: true }).toFormat(format);
   });
+  config.addFilter("md", require("nunjucks-markdown-filter"));
 
   // minify the html output
-  config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
+  // config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
 
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
