@@ -1,6 +1,6 @@
 ---
 title: I'm Patrick Judge.
-subtitle: I'm currently doing digital things for the [Better Government Association](https://www.bettergov.org/), in Chicago, Illinois. <br><br> View [my resume](#) or [email me](mailto:pjudge95@gmail.com).
+subtitle: I'm currently doing digital things for the [Better Government Association](https://www.bettergov.org/), in Chicago, Illinois. <br><br> View [my resume](/assets/pjudge-resume.pdf) or [email me](mailto:pjudge95@gmail.com).
 layout: layouts/base.njk
 ---
 
