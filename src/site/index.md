@@ -11,8 +11,10 @@ layout: layouts/base.njk
   {%- if tag in item.tags -%}
   <li>
   <figure>
-    <a class="img" href="{{ item.link }}"><img src="https://via.placeholder.com/300x200"></a>
-    <figcaption><a href="{{ item.link }}">{{ item.title }}</a><br>{{ item.description | md | safe }}</figcaption>
+    <a class="img" href="{{ item.link }}"><img src='{{ item.image | d("https://via.placeholder.com/300x200", true) }}'></a>
+    <figcaption>
+    <a href="{{ item.link }}"><strong>{{ item.title }}</strong></a><br>
+    {{ item.description | md | safe }}<br></figcaption>
   </figure>
   </li>
   {%- endif -%}
@@ -41,7 +43,7 @@ These projects were sourced from [this Google Sheet](https://docs.google.com/spr
 </div>
 {%- endmacro -%}
 
-As the lone coder on staff for the [Better Government Association](https://www.bettergov.org/), a small but mighty nonprofit [nearly a century old](https://www.bettergov.org/history), I wear a lot of different hats: web app developer, CMS engineer, digital production designer, graphic journalist, and technical decision-maker.
+As the lone coder on staff for the [Better Government Association](https://www.bettergov.org/), a small and mighty nonprofit [nearly a century old](https://www.bettergov.org/history), I wear a lot of different hats: designer/developer, CMS engineer, and graphic journalist.
 
 {{ portfolioSection('production') }}
 
