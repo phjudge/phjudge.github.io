@@ -6,3 +6,4 @@ src/site/_includes/css
 yarn-error.log
 credentials.json
 .python-version
+.DS_Store
