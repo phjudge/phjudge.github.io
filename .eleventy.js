@@ -13,6 +13,7 @@ module.exports = function(config) {
     return DateTime.fromJSDate(dateObj, { hour12: true }).toFormat(format);
   });
   config.addFilter("md", require("nunjucks-markdown-filter"));
+  config.addFilter("date", require("nunjucks-date-filter"));
 
   // minify the html output
   // config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
