@@ -24,12 +24,15 @@ layout: layouts/base.njk
 
 {%- macro portfolioSection(tag) -%}
 
-<div class="portfolio-section">
+<div class="portfolio-section section-{{tag}}">
 
 <div class="col-text">
-<h2>{{tag}}</h2>
-
-These projects were sourced from [this Google Sheet](https://docs.google.com/spreadsheets/d/10YkpIfRy7Bj3TzsE-7-IreYsADhxBFAJEFcYhZpKnYc/edit#gid=0) at build time.
+{%- for section in googleSheet.sections -%}
+  {%- if tag == section.tag -%}
+  <h2>{{ section.title }}</h2>
+  <p>{{ section.description }}</p>
+  {%- endif -%}
+{%- endfor -%}
 
 <hr>
 
