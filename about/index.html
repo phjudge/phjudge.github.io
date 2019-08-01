@@ -1,48 +1,361 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>*{margin:0;padding:0}::-moz-selection{background-color:#333;color:#ddd}::selection{background-color:#333;color:#ddd}html{background-color:#008b8b}body{text-align:center;background:#ddd;color:#777;font-family:sans-serif;font-weight:300;font-size:16px;line-height:1.8;min-height:100vh}@media (min-width: 740px){body{font-size:18px}}body::before{content:'';width:100%;height:0.5rem;background:#008b8b;display:block;position:fixed;top:0;z-index:9}.container{margin-left:auto;margin-right:auto;width:90%;text-align:left}@media (min-width: 740px){.container{width:600px}}@media (min-width: 1200px){.container{width:700px}}h1,h2,h3{color:#333;font-weight:600;margin-top:2em;margin-bottom:0.2em;line-height:1}h1{font-size:3em;margin-top:0.4em;margin-bottom:0.2em;line-height:1}@media (min-width: 740px){h1{font-size:4em}}p{margin-top:1em;margin-bottom:1em}.subtitle{font-size:1.2em;margin-top:1em;margin-bottom:5em}ul,ol{padding-left:1em}a:link,a:visited{color:#008b8b;text-decoration:none;border-bottom:solid 1px #c7d5d5}a:hover,a:focus{color:#008b8b;border-bottom:solid 1px #008b8b}header{padding-top:3em}.is-hidden{display:none}.nav li{display:inline}.nav a:link,.nav a:visited{display:inline-block;border-top:solid 1px #777;border-bottom-style:none;padding-top:0.8em;padding-bottom:2em;margin-left:0;margin-right:0.7em;width:8em;text-align:left;color:#555;text-decoration:none}.nav a:hover,.nav a:focus{color:#333;border-top:solid 1px #008b8b;border-bottom-style:none}.nav small{display:block;font-size:0.7em;color:#777}code{font-size:0.8em;background-color:#b1cdcd;color:#333;padding-top:4px;padding-bottom:4px;padding-left:6px;padding-right:6px;white-space:nowrap}.date{font-size:0.8em;font-style:italic}main{margin-top:4em}pre{margin-top:2em;margin-bottom:2em;padding-top:1em;padding-bottom:1em;padding-left:2em;padding-right:2em;line-height:1.2;background-color:#c7d5d5;border:solid 1px #9bc4c4;overflow:auto}pre code{border-style:none;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0}footer{margin-top:6em;padding-top:4em;padding-bottom:6em;border-top:solid 1px #ccc;font-size:0.7em;color:#999}.portfolio-section{display:flex;flex-direction:column;position:relative;margin:5em 0}@media (min-width: 740px){.portfolio-section{margin:5em -83.33333px}}@media (min-width: 1200px){.portfolio-section{flex-direction:row;margin:5em -250px}}.portfolio-section .col-text{align-self:flex-start;margin-bottom:2rem;top:0.5rem}@media (min-width: 1200px){.portfolio-section .col-text{flex:0 0 250px;margin-bottom:0;position:sticky}}hr{color:#c7d5d5}.col-gallery .listing{list-style:none;padding-left:0}@media (min-width: 1200px){.col-gallery .listing{padding-left:1em}}.col-gallery figure{display:flex;margin-bottom:4em;overflow:hidden;flex-direction:column}.col-gallery figure>.img{float:left}.col-gallery img{width:100%;object-fit:cover}.col-gallery figcaption strong{font-size:1.2em}@media (min-width: 600px){.col-gallery figure{flex-direction:row}.col-gallery figure>.img{margin-right:2em}.col-gallery img{width:300px;height:200px}}.section-graphic .listing{display:flex;flex-wrap:wrap;justify-content:space-between}.section-graphic figure{margin-bottom:3em}.section-graphic .img{margin:unset !important}.section-graphic .img+figcaption{display:none}
-</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ::-moz-selection {
+        background-color: #333;
+        color: #ddd;
+      }
+      ::selection {
+        background-color: #333;
+        color: #ddd;
+      }
+      html {
+        background-color: #008b8b;
+      }
+      body {
+        text-align: center;
+        background: #ddd;
+        color: #777;
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.8;
+        min-height: 100vh;
+      }
+      @media (min-width: 740px) {
+        body {
+          font-size: 18px;
+        }
+      }
+      body::before {
+        content: '';
+        width: 100%;
+        height: 0.5rem;
+        background: #008b8b;
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 9;
+      }
+      .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        text-align: left;
+      }
+      @media (min-width: 740px) {
+        .container {
+          width: 600px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          width: 700px;
+        }
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+        font-weight: 600;
+        margin-top: 2em;
+        margin-bottom: 0.2em;
+        line-height: 1;
+      }
+      h1 {
+        font-size: 3em;
+        margin-top: 0.4em;
+        margin-bottom: 0.2em;
+        line-height: 1;
+      }
+      @media (min-width: 740px) {
+        h1 {
+          font-size: 4em;
+        }
+      }
+      p {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+      .subtitle {
+        font-size: 1.2em;
+        margin-top: 1em;
+        margin-bottom: 5em;
+      }
+      ul,
+      ol {
+        padding-left: 1em;
+      }
+      a:link,
+      a:visited {
+        color: #008b8b;
+        text-decoration: none;
+        border-bottom: solid 1px #c7d5d5;
+      }
+      a:hover,
+      a:focus {
+        color: #008b8b;
+        border-bottom: solid 1px #008b8b;
+      }
+      header {
+        padding-top: 3em;
+      }
+      .is-hidden {
+        display: none;
+      }
+      .nav li {
+        display: inline;
+      }
+      .nav a:link,
+      .nav a:visited {
+        display: inline-block;
+        border-top: solid 1px #777;
+        border-bottom-style: none;
+        padding-top: 0.8em;
+        padding-bottom: 2em;
+        margin-left: 0;
+        margin-right: 0.7em;
+        width: 8em;
+        text-align: left;
+        color: #555;
+        text-decoration: none;
+      }
+      .nav a:hover,
+      .nav a:focus {
+        color: #333;
+        border-top: solid 1px #008b8b;
+        border-bottom-style: none;
+      }
+      .nav small {
+        display: block;
+        font-size: 0.7em;
+        color: #777;
+      }
+      code {
+        font-size: 0.8em;
+        background-color: #b1cdcd;
+        color: #333;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 6px;
+        padding-right: 6px;
+        white-space: nowrap;
+      }
+      .date {
+        font-size: 0.8em;
+        font-style: italic;
+      }
+      main {
+        margin-top: 4em;
+      }
+      pre {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        line-height: 1.2;
+        background-color: #c7d5d5;
+        border: solid 1px #9bc4c4;
+        overflow: auto;
+      }
+      pre code {
+        border-style: none;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      footer {
+        margin-top: 6em;
+        padding-top: 4em;
+        padding-bottom: 6em;
+        border-top: solid 1px #ccc;
+        font-size: 0.7em;
+        color: #999;
+      }
+      .portfolio-section {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 5em 0;
+      }
+      @media (min-width: 740px) {
+        .portfolio-section {
+          margin: 5em -83.33333px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .portfolio-section {
+          flex-direction: row;
+          margin: 5em -250px;
+        }
+      }
+      .portfolio-section .col-text {
+        align-self: flex-start;
+        margin-bottom: 2rem;
+        top: 0.5rem;
+      }
+      @media (min-width: 1200px) {
+        .portfolio-section .col-text {
+          flex: 0 0 250px;
+          margin-bottom: 0;
+          position: sticky;
+        }
+      }
+      hr {
+        color: #c7d5d5;
+      }
+      .col-gallery .listing {
+        list-style: none;
+        padding-left: 0;
+      }
+      @media (min-width: 1200px) {
+        .col-gallery .listing {
+          padding-left: 1em;
+        }
+      }
+      .col-gallery figure {
+        display: flex;
+        margin-bottom: 4em;
+        overflow: hidden;
+        flex-direction: column;
+      }
+      .col-gallery figure > .img {
+        float: left;
+      }
+      .col-gallery img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .col-gallery figcaption strong {
+        font-size: 1.2em;
+      }
+      @media (min-width: 600px) {
+        .col-gallery figure {
+          flex-direction: row;
+        }
+        .col-gallery figure > .img {
+          margin-right: 2em;
+        }
+        .col-gallery img {
+          width: 300px;
+          height: 200px;
+        }
+      }
+      .section-graphic .listing {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .section-graphic figure {
+        margin-bottom: 3em;
+      }
+      .section-graphic .img {
+        margin: unset !important;
+      }
+      .section-graphic .img + figcaption {
+        display: none;
+      }
+    </style>
     <title>Get Yours</title>
   </head>
-  <body class="" >
+  <body class="">
     <div class="container">
       <header>
-        <h1>Get Yours</h1><p class="subtitle">Clone and deploy your own EleventyOne starter template.</p>
+        <h1>Get Yours</h1>
+        <p class="subtitle">
+          Clone and deploy your own EleventyOne starter template.
+        </p>
       </header>
       <h2>Hosting</h2>
-<p>This site is deployed by, and hosted by <a href="https://www.netlify.com">Netlify</a>.</p>
-<p>Latest deploy status: <a href="https://app.netlify.com/sites/eleventyone/deploys"><img src="https://api.netlify.com/api/v1/badges/056b4a67-70e6-4af4-9be5-dee151b8e906/deploy-status" alt="Netlify Status"></a></p>
-<h2>One-click deploy</h2>
-<p>To get your own instance of this <a href="https://11ty.io">Eleventy</a> starter project cloned and deploying to <a href="https://www.netlify.com">Netlify</a> very quickly, just click the button below and follow the instructions.</p>
-<p><a href="https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/eleventyone"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a></p>
-<h2>👆 Wait, what happens when I click that button?</h2>
-<p>Good question. Here's what it will do...</p>
-<ol>
-<li>Netlify will clone the <a href="https://github.com/phjudge/my.website">git repository</a> of this project into your GitHub account. You will be asked for the required permissions to add the repo for you.</li>
-<li>They'll create a new site for you in Netlify, and configure it to use your shiny new repo. Right away you'll be able to deploy changes simply by pushing changes to your repo.</li>
-<li>That's it really.</li>
-</ol>
+      <p>
+        This site is deployed by, and hosted by
+        <a href="https://www.netlify.com">Netlify</a>.
+      </p>
+      <p>
+        Latest deploy status:
+        <a href="https://app.netlify.com/sites/eleventyone/deploys"
+          ><img
+            src="https://api.netlify.com/api/v1/badges/056b4a67-70e6-4af4-9be5-dee151b8e906/deploy-status"
+            alt="Netlify Status"
+        /></a>
+      </p>
+      <h2>One-click deploy</h2>
+      <p>
+        To get your own instance of this
+        <a href="https://11ty.io">Eleventy</a> starter project cloned and
+        deploying to <a href="https://www.netlify.com">Netlify</a> very quickly,
+        just click the button below and follow the instructions.
+      </p>
+      <p>
+        <a
+          href="https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/eleventyone"
+          ><img
+            src="https://www.netlify.com/img/deploy/button.svg"
+            alt="Deploy to Netlify"
+        /></a>
+      </p>
+      <h2>👆 Wait, what happens when I click that button?</h2>
+      <p>Good question. Here's what it will do...</p>
+      <ol>
+        <li>
+          Netlify will clone the
+          <a href="https://github.com/phjudge/my.website">git repository</a> of
+          this project into your GitHub account. You will be asked for the
+          required permissions to add the repo for you.
+        </li>
+        <li>
+          They'll create a new site for you in Netlify, and configure it to use
+          your shiny new repo. Right away you'll be able to deploy changes
+          simply by pushing changes to your repo.
+        </li>
+        <li>That's it really.</li>
+      </ol>
 
       <footer>
-<p>
-  The code is built from the <a href="https://github.com/philhawksworth/eleventyone">EleventyOne</a> scaffold project by <a href="https://twitter.com/philhawksworth">Phil Hawksworth</a>.
-</p>
+        <p>
+          The code is built from the
+          <a href="https://github.com/philhawksworth/eleventyone"
+            >EleventyOne</a
+          >
+          scaffold project by
+          <a href="https://twitter.com/philhawksworth">Phil Hawksworth</a>.
+        </p>
 
-<p>  
-Find the repo on <a href="https://github.com/phjudge/my.website">Github</a>.
-</p>
-<p>
-  This page was generated on Aug 1, 2019 - 7:05 AM
-</p>
-</footer>
+        <p>
+          Find the repo on
+          <a href="https://github.com/phjudge/my.website">Github</a>.
+        </p>
+        <p>
+          This page was generated on Aug 1, 2019 - 7:05 AM
+        </p>
+      </footer>
 
-      <script>function btnHandler(e,n){var t=document.querySelector(e);t&&t.addEventListener("click",function(e){e.preventDefault(),n()},!1)}btnHandler(".btn-log",function(){console.log("Oh, hello there!")});</script>
+      <script>
+        function btnHandler(e, n) {
+          var t = document.querySelector(e);
+          t &&
+            t.addEventListener(
+              'click',
+              function(e) {
+                e.preventDefault(), n();
+              },
+              !1
+            );
+        }
+        btnHandler('.btn-log', function() {
+          console.log('Oh, hello there!');
+        });
+      </script>
     </div>
   </body>
 </html>
-
-
-
