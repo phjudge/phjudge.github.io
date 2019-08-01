@@ -6,3 +6,4 @@ yarn-error.log
 credentials.json
 .python-version
 .DS_Store
+dist
