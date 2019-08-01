@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://site-root-url.com/about/</loc>
-  </url>
-  <url>
-    <loc>https://site-root-url.com/</loc>
+    <loc>https://phjudge.github.io/</loc>
   </url>
 </urlset>
