@@ -1,5 +1,5 @@
-@import "_variables";
-@import "_mixins";
+@import '_variables';
+@import '_mixins';
 
 * {
   margin: 0;
@@ -23,11 +23,12 @@ body {
   text-align: center;
   // background-color: $page-color;
   // background-image: linear-gradient(to bottom right, #8b2936, #81475d);
-  background-image: radial-gradient(
-    farthest-corner at bottom,
-    #393e90,
-    #1f1d4f
-  );
+  // background-image: radial-gradient(
+  //   farthest-corner at bottom,
+  //   #393e90,
+  //   $page-color
+  // );
+  background: $page-color;
   color: mix($text-color, $page-color, 60%);
   font-family: sans-serif;
   font-weight: 300;
@@ -41,7 +42,7 @@ body {
 }
 
 body::before {
-  content: "";
+  content: '';
   width: 100%;
   height: 0.5rem;
   background: $accent-color;
@@ -101,16 +102,18 @@ ol {
   padding-left: 1em;
 }
 
+$link-color: $accent-color;
+
 a:link,
 a:visited {
-  color: $text-color;
+  color: $link-color;
   text-decoration: none;
-  border-bottom: solid 1px mix($text-color, $page-color, 10%);
+  border-bottom: solid 1px mix($link-color, $page-color, 10%);
 }
 a:hover,
 a:focus {
-  color: $text-color;
-  border-bottom: solid 1px $text-color;
+  color: $link-color;
+  border-bottom: solid 1px $link-color;
 }
 
 header {
@@ -202,16 +205,16 @@ footer {
   font-size: 0.7em;
   color: mix($text-color, $page-color, 40%);
 
-  a:link,
-  a:visited {
-    color: mix($text-color, $page-color, 70%);
-    border-bottom: solid 1px mix($accent-color, $page-color, 70%);
-  }
-  a:hover,
-  a:focus {
-    color: $accent-color;
-    border-bottom: solid 1px $text-color;
-  }
+  // a:link,
+  // a:visited {
+  //   color: mix($text-color, $page-color, 70%);
+  //   border-bottom: solid 1px mix($accent-color, $page-color, 70%);
+  // }
+  // a:hover,
+  // a:focus {
+  //   color: $accent-color;
+  //   border-bottom: solid 1px $text-color;
+  // }
 }
 
 .portfolio-section {
@@ -236,6 +239,10 @@ footer {
     margin-bottom: 2rem;
     top: 0.5rem;
 
+    h2 {
+      // color: $accent-color;
+    }
+
     @include bp(wide) {
       flex: 0 0 $text-width;
       margin-bottom: 0;
@@ -245,6 +252,10 @@ footer {
       position: sticky;
     }
   }
+}
+
+hr {
+  color: mix($link-color, $page-color, 10%);
 }
 
 .col-gallery {
@@ -270,7 +281,7 @@ footer {
 
   img {
     width: 100%;
-    height: 100% * 2/3;
+    // height: 100% * 2/3;
     object-fit: cover;
   }
 
