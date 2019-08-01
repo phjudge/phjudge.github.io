@@ -1,9 +1,0 @@
-node_modules
-functions
-src/site/_includes/css
-.env
-yarn-error.log
-credentials.json
-.python-version
-.DS_Store
-dist
