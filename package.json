@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.8.2",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "concurrent-transform": "^1.0.0",
     "dotenv": "^6.2.0",
     "gootenberg": "^1.0.0",
